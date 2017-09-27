@@ -1,0 +1,31 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+	static final int[] a = {40320, 5040, 720, 120, 24, 6, 2, 1};	
+	public static void main (String[] args){
+		PrintStream sa = System.out;
+		Scanner scanner = new Scanner(System.in); 
+        String s, s1;
+        int x = scanner.nextInt();
+        String enter = scanner.nextLine();
+        for(int i = 0;i < x;i++){
+            s = scanner.nextLine();
+			
+			int p = s.indexOf('!');
+			
+			int a = Integer.parseInt(s.substring(0, p));
+			int b = s.length() - p;
+			
+			long r = a, r1 = r;
+			
+			for(int j = 1;j < a;j++){
+				r *= a - (j * b);
+				if(r < 1)
+					break;
+				r1 = r;
+			}
+			
+			System.out.printf("%d\n", r1);
+        }
+	}
+}
