@@ -1,0 +1,21 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int x = sc.nextInt();
+		String b = sc.nextLine(),a;
+		for(int i=0;i<x;i++){
+			a = sc.nextLine();
+			if(a.charAt(1)=='n' && a.charAt(2)=='e') sa.println("1");
+			else if(a.charAt(0)=='o' && a.charAt(1)=='n') sa.println("1");
+			else if(a.charAt(0)=='o' && a.charAt(2)=='e') sa.println("1");
+			else if(a.charAt(1)=='w' && a.charAt(2)=='o') sa.println("2");
+			else if(a.charAt(0)=='t' && a.charAt(2)=='o') sa.println("2");
+			else if(a.charAt(0)=='t' && a.charAt(1)=='w') sa.println("2");
+			else sa.println("3");
+		}
+
+	}
+ }
