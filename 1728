@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+public class Main{	
+	public static void main (String[] args){
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int q = 1;
+		while(q!=0){
+			String a = sc.next();
+			if(a.charAt(0)=='0' && a.charAt(1)=='+' && a.charAt(2)=='0' && a.charAt(3)=='='
+			&& a.charAt(4)=='0'){
+				sa.println("True");
+				break;
+			}
+			int p = a.indexOf("+"),i = a.indexOf("="),t = a.length();
+			String s = a.substring(0,p),si = a.substring(p+1,i),st = a.substring(i+1,t);
+			String x = new StringBuilder(s).reverse().toString();
+			String y = new StringBuilder(si).reverse().toString();
+			String z = new StringBuilder(st).reverse().toString();
+			int px = Integer.parseInt(x);
+			int py = Integer.parseInt(y);
+			int pz = Integer.parseInt(z);
+			if(px+py==pz) sa.println("True");
+			else sa.println("False");
+		}
+		 
+	}
+}
