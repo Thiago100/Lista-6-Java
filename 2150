@@ -1,0 +1,19 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		while(sc.hasNext()){
+			String a = sc.next(),enter = sc.nextLine(),b = sc.nextLine();
+			int x=0;
+			for(int i=0;i<a.length();i++){
+				for(int j=0;j<b.length();j++){
+					if(b.charAt(j)==a.charAt(i)) x++;
+				}
+			}
+			sa.println(x);
+		}
+		
+	}
+}
