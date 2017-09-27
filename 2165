@@ -1,0 +1,12 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		String a = sc.nextLine();
+		if(a.length() <= 140) sa.println("TWEET");
+		else sa.println("MUTE");
+		
+	}
+ }
