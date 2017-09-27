@@ -1,0 +1,27 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int x,z[] = new int[50],b = 0;
+		while(sc.hasNext()){
+            String a = sc.next();
+            int v[] = new int[50];
+            for(int i=0;i<a.length();i++){
+                x = a.charAt(i) -'0';
+                v[x]++;
+                z[x] = x;
+            }
+            int maior = 0;
+            for(int i=0;i<10;i++){
+                if(v[i]>=maior){
+                    maior = v[i];
+                    b = i;
+                }
+            }
+            sa.println(z[b]);
+		}
+
+    }
+}
