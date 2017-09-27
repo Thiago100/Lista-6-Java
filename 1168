@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int n=sc.nextInt(),soma=0,x;
+		String a = sc.nextLine();
+		for(int i=0;i<n;i++){
+			a = sc.nextLine();
+			x = a.length();
+			for(int j=0;j<x;j++){
+				if(a.charAt(j)=='1') soma+=2;
+				if(a.charAt(j)=='4') soma+=4;
+				if(a.charAt(j)=='7') soma+=3;
+				if(a.charAt(j)=='8') soma+=7;
+				if(a.charAt(j)=='5' || a.charAt(j)=='2' || a.charAt(j)=='3') soma+=5;
+				if(a.charAt(j)=='9' || a.charAt(j)=='6' || a.charAt(j)=='0') soma+=6;
+			}
+			sa.println(soma+" leds");
+			soma=0;
+		}
+
+	}
+ }
