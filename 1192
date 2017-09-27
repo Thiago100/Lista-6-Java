@@ -1,0 +1,17 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		for(int i=0;i<n;i++){
+			String a = sc.next();
+			int x = a.charAt(0)-'0',y= a.charAt(2)-'0';
+			if(x==y) sa.println((x*y));
+			else if(a.charAt(1)>='A' && a.charAt(1)<='Z') sa.println((y-x));
+			else sa.println((x+y));
+		}
+	
+	}
+}
