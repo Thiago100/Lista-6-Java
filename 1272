@@ -1,0 +1,24 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(),z=0,l=0,c=0;
+		String x = sc.nextLine();
+		for(int i=0;i<n;i++){
+			String a = sc.nextLine();
+			if(a.charAt(0)!=' ') sa.printf("%c",a.charAt(0));
+			for(int j=1;j<a.length();j++){
+				l = j-1;
+				if(a.charAt(l)==' ' )z++;
+				else z=0;
+				if(a.charAt(j)!=' ' && a.charAt(j)>='a' || a.charAt(j)>='A' 
+				&& a.charAt(j)<='Z' || a.charAt(j)<='z') c++;
+				else c=0;
+				if(c!=0 && z!=0 && a.charAt(j)!=' ') sa.printf("%c",a.charAt(j));
+			}
+			sa.println();
+		}
+	}
+}
