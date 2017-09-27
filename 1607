@@ -1,0 +1,37 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+public class Main{	
+	public static int Conta(String x,String y,int pos){
+		int cont=0;
+		char a=x.charAt(pos);
+		char b=y.charAt(pos);
+
+		if(a==b) return 0;
+		while(a!=b){
+			a+=1;
+			cont++;
+			 
+			if(a>'z')a='a';
+		}
+		return cont;
+	}
+	public static void main (String[] args){
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		String enter = sc.nextLine();
+		 
+		for(int vangelis_meu_sonho=0;vangelis_meu_sonho<n;vangelis_meu_sonho++){
+			   
+			String vet[]=new StringBuffer(sc.nextLine()).toString().split(" ");
+			
+			int cont=0;
+			for(int i=0;i<vet[0].length();i++){
+				//System.out.println(vet[0]+" "+vet[1]);
+				cont+=Conta(vet[0],vet[1],i);
+				
+			}
+			System.out.println(cont);
+		}
+	}
+}
