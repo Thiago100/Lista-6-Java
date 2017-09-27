@@ -1,0 +1,22 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int c = 0,x,n;
+		String a;
+        while(sc.hasNext()){
+            n = sc.nextInt();
+            a = sc.next();
+            for(int i=0;i<n;i++){
+                x = a.charAt(i)-'0';
+                c += x;
+            }
+            if(c%3==0) sa.println(c+" sim");
+            else sa.println(c+" nao");
+            c=0;
+        }
+	}
+ }
