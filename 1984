@@ -1,0 +1,12 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		String a = sc.nextLine();
+		String x = new StringBuilder(a).reverse().toString();
+		sa.println(x);
+		
+	}
+ }
