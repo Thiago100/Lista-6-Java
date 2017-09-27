@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int x=0,z=0;
+		while(z!=3){
+			String a = sc.nextLine();
+			if(a.equals("--*")) x+=1;
+			else if(a.equals("-*-")) x+=2;
+			else if(a.equals("*--")) x+=4;
+			else if(a.equals("***")) x+=7;
+			else if(a.equals("*-*")) x+=5;
+			else if(a.equals("-**")) x+=3;
+			else if(a.equals("**-")) x+=6;
+			if(a.equals("caw caw")){
+				sa.println(x);
+				x=0;
+				z++;
+			}
+		}
+		
+	}
+}
