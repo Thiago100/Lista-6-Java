@@ -1,0 +1,22 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(),l;
+		for(int i=0;i<n;i++){
+			String a = sc.next(),p=sc.next(),b = sc.next(),im = sc.next();
+			if(p.equals("PAR")) l=0;
+			else l=50;
+			int x = sc.nextInt(),y=sc.nextInt();
+			if(l==0){
+				if((x+y)%2==0) sa.println(a);
+				else sa.println(b);
+			}else{
+				if((x+y)%2==0) sa.println(b);
+				else sa.println(a);
+			}
+		}
+	}
+}
