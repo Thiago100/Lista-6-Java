@@ -1,0 +1,16 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int a = sc.nextInt(),b = sc.nextInt();
+		String x = sc.nextLine(),s;
+		for(int i=0;i<b;i++){
+			s = sc.nextLine();
+			if(s.equals("fechou")) a++;
+			else a--;
+		}sa.println(a);
+
+	}
+ }
