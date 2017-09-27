@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(),soma = 0;
+		String x = sc.nextLine(),a;
+		while(n!=0){
+			a = sc.next();
+			for(int i=0;i<a.length();i++){
+				if(a.charAt(i)=='D') soma++;
+				else soma--;
+			}
+			soma = soma%4;
+			if(soma==0) sa.println("N");
+			if(soma==2 || soma==-2) sa.println("S");
+			if(soma==3 || soma==-1) sa.println("O");
+			if(soma==1 || soma==-3) sa.println("L");
+			n = sc.nextInt();
+			soma = 0;
+		}
+		
+    }
+}
