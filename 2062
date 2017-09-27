@@ -1,0 +1,20 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		String a;
+		int n=sc.nextInt();
+		for(int i=0;i<n;i++){
+			a = sc.next();
+			if(a.charAt(0)=='O' && a.charAt(1)=='B' && a.length()==3) sa.printf("OBI");
+			else if(a.charAt(0)=='U' && a.charAt(1)=='R' && a.length()==3) sa.printf("URI");
+			else sa.printf("%s",a);
+			if(i!=n-1){
+				sa.printf(" ");
+			}
+		}
+		sa.println();
+	}
+}
