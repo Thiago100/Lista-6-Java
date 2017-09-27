@@ -1,0 +1,69 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+        String a,b;
+        int i,n = sc.nextInt();
+        for(i=0;i<n;i++){
+            int x = 5,pe=5,pa=5,te=5,la=5,sp=5,ig=5,peb=5,pab=5,teb=5,lab=5,spb=5;
+            a = sc.next();
+            b = sc.next();
+            if(a.equals(b)){ sa.printf("empate\n");x=0;}
+
+            if (a.equals("pedra")) pe=0;
+            if (a.equals("papel")) pa=0;
+            if (a.equals("tesoura")) te=0;
+            if (a.equals("lagarto")) la=0;
+            if (a.equals("spock")) sp=0;
+
+            if (b.equals("pedra")) peb = 0;
+            if (b.equals("papel")) pab = 0;
+            if (b.equals("tesoura")) teb = 0;
+            if (b.equals("lagarto")) lab = 0;
+            if (b.equals("spock")) spb = 0;
+
+            if(pe==0 && ig!=0 && x!=0){
+                if(teb==0 || lab==0){
+                    sa.printf("rajesh\n");
+                }else{
+                    sa.printf("sheldon\n");
+                }
+            }
+
+            if(pa==0 && ig!=0 && x!=0){
+                if(peb==0 || spb==0){
+                    sa.printf("rajesh\n");
+                }else{
+                    sa.printf("sheldon\n");
+                }
+            }
+
+            if(te==0 && ig!=0 && x!=0){
+                if(pab==0 || lab==0){
+                    sa.printf("rajesh\n");
+                }else{
+                    sa.printf("sheldon\n");
+                }
+            }
+
+            if(la==0 && ig!=0 && x!=0){
+                if(spb==0 || pab==0){
+                    sa.printf("rajesh\n");
+                }else{
+                    sa.printf("sheldon\n");
+                }
+            }
+
+            if(sp==0 && ig!=0 && x!=0){
+                if(peb==0 || teb==0){
+                    sa.printf("rajesh\n");
+                }else{
+                   sa.printf("sheldon\n");
+                }
+            }
+        }
+
+    }
+}
