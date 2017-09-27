@@ -1,0 +1,15 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		String a = "LIFE IS NOT A PROBLEM TO BE SOLVED";
+		int n = sc.nextInt();
+		for(int i=0;i<n;i++){
+            sa.printf("%c",a.charAt(i));
+		}
+		sa.println();
+
+    }
+}
