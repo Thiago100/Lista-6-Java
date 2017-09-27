@@ -1,0 +1,12 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		String a = sc.nextLine();
+		if(a.length()<=80) sa.println("YES");
+		else sa.println("NO");
+		
+    }
+}
