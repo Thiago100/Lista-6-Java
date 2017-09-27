@@ -1,0 +1,20 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		String a = sc.nextLine(),s;
+		double x=1,b = sc.nextDouble(),soma=b;
+
+		while(sc.hasNext()){
+			a = null;
+            a = sc.nextLine();
+            s = sc.nextLine();
+			b = sc.nextDouble();
+			soma+=b;
+			x++;
+		}sa.printf("%.1f\n",soma/x);
+
+	}
+ }
