@@ -1,0 +1,13 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
+		PrintStream sa = System.out;
+		String a = sc.next();
+		double s = sc.nextDouble(),v = sc.nextDouble();
+		sa.printf("TOTAL = R$ %.2f\n",v*15/100+s);
+
+	}
+ }
