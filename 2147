@@ -1,0 +1,27 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int c = 0,x,n = sc.nextInt();
+		String a;
+		for(int i=0;i<n;i++){
+            a = sc.next();
+            x = a.length();
+            if(x<10) sa.println("0.0"+x);
+            else if(x<100) sa.println("0."+x);
+            if(x>=100){
+                while(x>=100){
+                    x-=100;
+                    c++;
+                }
+                if(x<10) sa.println(c+".0"+x);
+                else if(x<100) sa.println(c+"."+x);
+            }
+            c = 0;
+		}
+
+	}
+ }
